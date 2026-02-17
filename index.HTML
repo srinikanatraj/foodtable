@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Menu Search</title>
+
+<style>
+
+/* ===== Background ===== */
+body{
+    font-family:Poppins, sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+}
+
+/* Container */
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(12px);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:white;
+}
+
+/* Search Box */
+.search-box{
+    text-align:center;
+    margin:20px 0;
+}
+
+.search-box input{
+    width:60%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    outline:none;
+    font-size:16px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+th{
+    background:linear-gradient(45deg,#ff6a00,#ee0979);
+    color:white;
+    padding:14px;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+}
+
+tr:nth-child(odd){ background:rgba(255,255,255,0.85);}
+tr:nth-child(even){ background:rgba(255,255,255,0.65);}
+
+tr:hover{
+    background:linear-gradient(90deg,#84fab0,#8fd3f4);
+    transform:scale(1.01);
+    transition:0.3s;
+}
+
+/* Category Tags */
+.category{
+    padding:5px 12px;
+    border-radius:20px;
+    color:white;
+}
+
+.fastfood{background:#ff4757;}
+.veg{background:#2ed573;}
+.beverage{background:#1e90ff;}
+.dessert{background:#e84393;}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🍽️ Food Menu</h1>
+
+<div class="search-box">
+    🔍 <input type="text" id="searchInput"
+        placeholder="Search food, category, or price..."
+        onkeyup="searchFood()">
+</div>
+
+<table id="foodTable">
+<thead>
+<tr>
+<th>Food Item</th>
+<th>Category</th>
+<th>Price (₹)</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Cheese Burger</td>
+<td><span class="category fastfood">Fast Food</span></td>
+<td>120</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>Veg Pizza</td>
+<td><span class="category veg">Vegetarian</span></td>
+<td>180</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>Cold Coffee</td>
+<td><span class="category beverage">Beverage</span></td>
+<td>90</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>Chocolate Cake</td>
+<td><span class="category dessert">Dessert</span></td>
+<td>150</td>
+<td>Popular</td>
+</tr>
+
+<tr>
+<td>French Fries</td>
+<td><span class="category fastfood">Fast Food</span></td>
+<td>80</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>Mango Juice</td>
+<td><span class="category beverage">Beverage</span></td>
+<td>70</td>
+<td>Fresh</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+<!-- ===== JavaScript Search Filter ===== -->
+<script>
+
+function searchFood() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let table = document.getElementById("foodTable");
+    let rows = table.getElementsByTagName("tr");
+
+    for (let i = 1; i < rows.length; i++) {
+        let rowText = rows[i].textContent.toLowerCase();
+
+        if (rowText.includes(input)) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
