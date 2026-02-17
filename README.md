@@ -126,3 +126,5 @@ Created for learning and UI development practice.
 ⭐ Simple, Interactive, and Beginner-Friendly Web Project
 
 If you want, I can also give you a GitHub-style README (professional portfolio version) — looks very impressive for placements and LinkedIn 🚀.
+
+OUTPUT:https://srinikanatraj.github.io/foodtable/
