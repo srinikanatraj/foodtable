@@ -120,8 +120,13 @@ Food images integration
 
 👨‍💻 Author
 
-Food Menu Search Project
-Created for learning and UI development practice.
+**Srinika N**
+UI/UX Designer • AI & ML Enthusiast
+
+📧 Email: [srinikanatraj@gmail.com](mailto:srinikanatraj@gmail.com)
+🔗 LinkedIn: https://www.linkedin.com/in/srinika-n-659771372/
+💻 GitHub: https://github.com/srinikanatraj
+
 
 ⭐ Simple, Interactive, and Beginner-Friendly Web Project
 
